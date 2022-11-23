@@ -5,16 +5,19 @@ function motivationalSpeechWallpaper(
   topCenterBottom,
   leftCenterBottom
 ) {
-  let innerFlex = document.createElement("div");
+  let wallpaperDiv = document.createElement("div");
 
-  let textLayout = document.createElement("div");
+
+  let textDiv = document.createElement("div");
   let displayText = document.createElement("p");
   displayText.innerHTML = text;
+  textDiv.style.color = "#" + colorCode;
 
-  innerFlex.append(textLayout);
-  textLayout.append(displayText);
+   textDiv.append(displayText);
+   wallpaperDiv.append(textDiv);
 
-  return innerFlex;
+
+  return wallpaperDiv;
 }
 
 const imageDiv = document.getElementById("images");
