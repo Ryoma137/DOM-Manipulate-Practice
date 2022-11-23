@@ -13,12 +13,17 @@ function motivationalSpeechWallpaper(
   displayText.innerHTML = text;
   textDiv.style.color = "#" + colorCode;
 
+
+  wallpaperDiv.style = "background-image: url(" + imgUrl + ")";
+
    textDiv.append(displayText);
    wallpaperDiv.append(textDiv);
 
 
   return wallpaperDiv;
 }
+
+
 
 const imageDiv = document.getElementById("images");
 
